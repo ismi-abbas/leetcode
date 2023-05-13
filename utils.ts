@@ -1,5 +1,5 @@
-export default function runTest(func: Function, data: any) {
-  console.time(func.name)
+export default function runTest(func: Function, funcAlias: string, data: any) {
+  console.time(funcAlias)
   func(data)
-  console.timeEnd(func.name)
+  console.timeEnd(funcAlias)
 }

@@ -1,4 +1,4 @@
-import { test_data } from './data'
+import { isDuplicateTestData } from './data'
 import runTest from './utils'
 
 // this solution is not good as it is O(n^2)
@@ -22,5 +22,5 @@ function containsDuplicate2(nums: number[]): boolean {
   return set.size < nums.length
 }
 
-runTest(containsDuplicate, test_data)
-runTest(containsDuplicate2, test_data)
+runTest(containsDuplicate, 'forLoop', isDuplicateTestData)
+runTest(containsDuplicate2, 'use Set', isDuplicateTestData)
